@@ -1,0 +1,52 @@
+.access {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  position: relative;
+
+  h1 {
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    font-size: 18px;
+    margin: 0 0 75px;
+  }
+
+  h3 {
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    font-size: 18px;
+    margin: 0 0 45px;
+  }
+
+  p {
+    letter-spacing: 0.1em;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 2em;
+  }
+
+  a {
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    border-bottom: 0.5px gray solid;
+  }
+
+  &--map {
+    width: calc(100% - 50px);
+    filter: grayscale(1);
+  }
+
+  &--text {
+    position: relative;
+    padding: 100px 0 0 0;
+    font-size: 17px;
+  }
+
+
+  &--bottom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}

@@ -1,0 +1,49 @@
+.about {
+
+  h1 {
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    font-size: 18px;
+    margin: 0 0 75px;
+  }
+
+  h3 {
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    font-size: 18px;
+    margin: 0 0 55px;
+  }
+
+  p {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 2em;
+    margin: 0 0 45px;
+  }
+
+  &--bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    position: relative;
+  }
+
+  &--left{
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  &--right {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  &--float {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+}

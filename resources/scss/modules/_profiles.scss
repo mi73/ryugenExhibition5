@@ -1,0 +1,81 @@
+.profiles {
+
+  h1 {
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    font-size: 18px;
+    margin: 0 0 75px;
+  }
+
+  h3 {
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    font-size: 18px;
+    margin: 0 0 45px;
+  }
+
+  p {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 2em;
+    margin: 0 0 45px;
+  }
+
+  ul {
+    margin: 0 0 45px;
+    li {
+        line-height: 2em;
+        &::before {
+          content: "・";
+          display: block;
+          float: left;
+          width: 1em;
+          text-align: center;
+        }
+      }
+  }
+
+  &--top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    position: relative;
+  }
+
+  &--bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    position: relative;
+    padding: 0 0 155px;
+  }
+
+  &--left{
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  &--right {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  &--float {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+    img {
+      display: inline-block;
+      vertical-align: bottom;
+    }
+    p {
+      display: inline-block;
+      margin: 0;
+      font-size: 20px;
+      font-weight: 500;
+      vertical-align: bottom;
+      line-height: 1em;
+    }
+  }
+}
