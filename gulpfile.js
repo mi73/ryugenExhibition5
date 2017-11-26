@@ -4,7 +4,9 @@ var pleeease        = require('gulp-pleeease');
 var plumber         = require('gulp-plumber');
 var browserSync     = require('browser-sync');
 var sass            = require('gulp-sass');
-var pug            = require('gulp-pug');
+var pug             = require('gulp-pug');
+var s3              = require('gulp-s3');
+
 // var removeAttributes = require('gulp-css-remove-attributes');
 
 
@@ -85,3 +87,14 @@ gulp.task('serverReload', function() {
 gulp.task('build', ['sass', 'pug','sass_sp', 'pug_sp', 'sprite', 'sprite_sp', 'webpack']);
 gulp.task('default', ['watch','pug','sass_sp', 'pug_sp', 'server']);
 
+
+var AWS = {
+  "key":    'AKIAJEYPLDA3CNA5YYNA',//process.env.AWS_ACCESS_KEY_ID,
+  "secret": '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',//process.env.AWS_SECRET_ACCESS_KEY,
+  "bucket": "exhibition5.ryugen.jp",
+  "region": "ap-northeast-1"
+};
+
+gulp.task('deploy', () => {
+  gulp.src('./build/**').pipe(s3(AWS));
+});

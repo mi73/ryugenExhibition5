@@ -42,4 +42,9 @@ section {
   width: calc(100% - 170px);
   margin: 0 35px 0 135px;
   letter-spacing: 0.05em;
+
+  @media (max-width:800px) {
+    width: calc(100% - 40px);
+    margin: 0 20px 0 20px;
+  }
 }

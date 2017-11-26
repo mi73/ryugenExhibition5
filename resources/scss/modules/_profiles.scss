@@ -12,17 +12,23 @@
     letter-spacing: 0.1em;
     font-size: 18px;
     margin: 0 0 45px;
+    @media (max-width:800px) {
+      margin: 25px 0 25px 0;
+    }
   }
 
   p {
     font-size: 12px;
     font-weight: 500;
     line-height: 2em;
-    margin: 0 0 45px;
+    margin: 0 0 25px;
   }
 
   ul {
     margin: 0 0 45px;
+    @media (max-width:800px) {
+      margin: 0 0 25px;
+    }
     li {
         line-height: 2em;
         &::before {
@@ -32,6 +38,10 @@
           width: 1em;
           text-align: center;
         }
+
+        @media (max-width:800px) {
+          font-size: 12px;
+        }
       }
   }
 
@@ -40,6 +50,10 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     position: relative;
+
+    @media (max-width:800px) {
+      display: block;
+    }
   }
 
   &--bottom {
@@ -48,11 +62,16 @@
     grid-template-rows: 1fr;
     position: relative;
     padding: 0 0 155px;
+
+    @media (max-width:800px) {
+      display: block;
+    }
   }
 
   &--left{
     grid-column: 1;
     grid-row: 1;
+    padding: 0 35px 0 0;
   }
 
   &--right {

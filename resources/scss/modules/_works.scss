@@ -5,6 +5,11 @@
   grid-template-rows: 1fr 1fr 1fr 1fr;
   position: relative;
 
+  @media (max-width:800px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
   .work {
     padding-top: 82%;
     background-position: center center;
@@ -19,7 +24,6 @@
 }
 
 .workDetail {
-
 
   display: none;
   position:relative;
@@ -46,10 +50,15 @@
     top: 0;
     left: -60px;
     font-size: 8px;
+
+    @media (max-width:800px) {
+      top: 2px;
+      left: 0;
+    }
   }
 
   &--box {
-    text-align: cener;
+    text-align: center;
     img {
       width: 66.666%;
       margin: 0 16.6666%;

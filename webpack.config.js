@@ -31,11 +31,11 @@ module.exports = {
   devtool: 'source-map',
   plugins: [
     new CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.bundle.js' }),
-    // new UglifyJsPlugin({
-    //   compress: {
-    //     warnings: false
-    //   }
-    // })
+    new UglifyJsPlugin({
+          compress: {
+            warnings: false
+          }
+        })
   ],
   cache: true,
   watch: true

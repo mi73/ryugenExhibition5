@@ -1,7 +1,7 @@
 .interview {
 
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr;
   position: relative;
 
@@ -58,6 +58,10 @@
     img {
       width: 100%;
       margin: 5px 0 35px;
+    }
+
+    @media (max-width:800px) {
+      width: calc(100% - 20px);
     }
   }
 

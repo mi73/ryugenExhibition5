@@ -12,6 +12,10 @@
     letter-spacing: 0.1em;
     font-size: 18px;
     margin: 0 0 55px;
+
+    @media (max-width:800px) {
+      margin: 0 0 25px;
+    }
   }
 
   p {
@@ -26,11 +30,16 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     position: relative;
+    
+    @media (max-width:800px) {
+      display: block;
+    }
   }
 
   &--left{
     grid-column: 1;
     grid-row: 1;
+    padding: 0 35px 0 0;
   }
 
   &--right {

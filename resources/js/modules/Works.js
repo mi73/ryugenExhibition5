@@ -78,7 +78,7 @@ export default class Work extends events {
     this.$title.text(this.titles[index]);
     this.$description.text(this.descriptions[index]);
 
-    const src = `${IMAGE_PATH}/${index + 1}.jpg`;
+    const src = `${IMAGE_PATH}${index + 1}.jpg`;
     this.$img.attr('src', src);
     this.loaded[index] = true;
 
@@ -186,7 +186,7 @@ export default class Work extends events {
       this.$title.text(this.titles[index]);
       this.$description.text(this.descriptions[index]);
 
-      const src = `${IMAGE_PATH}/${index + 1}.jpg`;
+      const src = `${IMAGE_PATH}${index + 1}.jpg`;
       this.$img.attr('src', src);
 
       velocity(this.$img, 'fadeIn', {
@@ -220,11 +220,11 @@ export default class Work extends events {
 
     if (!this.loaded[prev]) {
       const prevImage = new Image;
-      prevImage.src = `${IMAGE_PATH}/${prev + 1}.jpg`;
+      prevImage.src = `${IMAGE_PATH}${prev + 1}.jpg`;
     }
     if (!this.loaded[next]) {
       const nextImage = new Image;
-      nextImage.src = `${IMAGE_PATH}/${next + 1}.jpg`;
+      nextImage.src = `${IMAGE_PATH}${next + 1}.jpg`;
     }
 
   }

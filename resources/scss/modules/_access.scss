@@ -5,6 +5,11 @@
   grid-template-rows: 1fr;
   position: relative;
 
+
+  @media (max-width:800px) {
+    display: block;
+  }
+
   h1 {
     font-weight: 900;
     letter-spacing: 0.1em;
@@ -35,18 +40,30 @@
   &--map {
     width: calc(100% - 50px);
     filter: grayscale(1);
+
+    @media (max-width:800px) {
+      width: calc(100% - 20px);
+    }
   }
 
   &--text {
     position: relative;
     padding: 100px 0 0 0;
     font-size: 17px;
-  }
 
+    @media (max-width:800px) {
+      padding: 20px 0 0 0;
+    }
+  }
 
   &--bottom {
     position: absolute;
     left: 0;
     bottom: 0;
+
+    @media (max-width:800px) {
+      margin: 40px 0 0 0;
+      position: relative;
+    }
   }
 }
