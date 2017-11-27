@@ -1,15 +1,13 @@
 import $ from 'jquery';
 import velocity from 'velocity-animate';
-import events from 'events';
 
 const IMAGE_PATH = '/img/thumb/';
 
 /**
  * Work‚ÌUIƒNƒ‰ƒX
  */
-export default class Work extends events {
+export default class Work {
   constructor(selector) {
-    super();
     this.$ = $('.works');
     this.$work = this.$.find('a');
 

@@ -12,8 +12,6 @@ module.exports = {
       'jquery',
       'babel-polyfill',
       'velocity-animate',
-      'util',
-      'events',
     ],
     index: [JS_SRC + '/index.js'],
   },

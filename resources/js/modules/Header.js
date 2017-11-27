@@ -1,12 +1,10 @@
 import $ from 'jquery';
-import events from 'events';
 
 /**
  * FEATURE‚ÌUIƒNƒ‰ƒX
  */
-export default class Header extends events {
+export default class Header {
   constructor() {
-    super();
     this.$ = $('.header');
     this.$a = this.$.find('.header--list a');
 

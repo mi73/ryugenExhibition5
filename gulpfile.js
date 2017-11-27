@@ -19,7 +19,7 @@ gulp.task('sass', function () {
     .pipe(sass())
     .pipe(pleeease({
       autoprefixer: {"browsers": ["last 4 versions", 'ie 11', "Android 2.3"]},
-      minifier: util.env.d ? false : true
+      minifier: !util.env.d
     }))
     // .pipe(removeAttributes(['-ms-filter'], {compress: true}))
     .pipe(gulp.dest('./build/css/'));
@@ -32,7 +32,7 @@ gulp.task('sass_sp', function () {
     .pipe(sass())
     .pipe(pleeease({
       autoprefixer: {"browsers": ["last 4 versions", 'ie 10', "Android 2.3"]},
-      minifier: util.env.d ? false : true
+      minifier: !util.env.d
     }))
     // .pipe(removeAttributes(['-webkit-clip-path'], {compress: true}))
     .pipe(gulp.dest('./build/sp/css/'));
@@ -44,7 +44,7 @@ gulp.task('pug', function (){
      '!./resources/pug/modules/*.pug'
      ])
      .pipe(plumber())
-     .pipe(pug({pretty: util.env.d ? true : true}))
+     .pipe(pug({pretty: util.env.d}))
      .pipe(gulp.dest('./build/'));
 });
 
@@ -54,7 +54,7 @@ gulp.task('pug_sp', function (){
      '!./resources/sp/pug/modules/*.pug'
      ])
      .pipe(plumber())
-     .pipe(pug({pretty: util.env.d ? true : true}))
+     .pipe(pug({pretty: util.env.d}))
      .pipe(gulp.dest('./build/sp/'));
 });
 
